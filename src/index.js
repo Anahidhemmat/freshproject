@@ -2,6 +2,7 @@
 
 import React from "react";
 import ReactDom from "react-dom";
+import CommentDetails from "./Components/CommentDetails";
 
 function getButtonText() {
   return "Click me!";
@@ -10,14 +11,10 @@ function getButtonText() {
 
 const App = () => {
   return (
-    <div>
-      <label className="label" htmlFor="name">
-        Enter name:
-      </label>
-      <input type="text" />
-      <button style={{ backgroundColor: "yellow", color: "black" }}>
-        {getButtonText()}
-      </button>
+    <div className="ui container comments">
+      <CommentDetails author="Sam" />
+      <CommentDetails author="Alex" />
+      <CommentDetails author="Jane" />
     </div>
   );
 };
