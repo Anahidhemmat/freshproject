@@ -1,9 +1,16 @@
 import CommentDetails from "./Components/CommentDetails";
 import ApprovalCard from "./Components/ApprovalCard";
 import { faker } from "@faker-js/faker";
+import { useSelector } from "react-redux";
 const App = () => {
+  const counter = useSelector((state) => state.counter);
+  const isLogged = useSelector((state) => state.isLogged);
   return (
-    <div></div>
+    <div>
+      <h1>Counter: {counter}</h1>
+
+      {isLogged ? <h3>Hidden info</h3> : ""}
+    </div>
 
     // <div className="ui container comments">
     //   <ApprovalCard>
